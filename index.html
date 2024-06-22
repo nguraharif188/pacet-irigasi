@@ -224,15 +224,15 @@
         });
         layer_GoogleSatellite_0;
         map.addLayer(layer_GoogleSatellite_0);
-        map.createPane('pane_ORTHOMOSAIC_georeferenced_1');
-        map.getPane('pane_ORTHOMOSAIC_georeferenced_1').style.zIndex = 401;
-        var img_ORTHOMOSAIC_georeferenced_1 = 'data/ORTHOMOSAIC_georeferenced_1.png';
-        var img_bounds_ORTHOMOSAIC_georeferenced_1 = [[-7.623917080856694,112.53548343759712],[-7.62290429916348,112.53698034258313]];
-        var layer_ORTHOMOSAIC_georeferenced_1 = new L.imageOverlay(img_ORTHOMOSAIC_georeferenced_1,
-                                              img_bounds_ORTHOMOSAIC_georeferenced_1,
-                                              {pane: 'pane_ORTHOMOSAIC_georeferenced_1'});
-        bounds_group.addLayer(layer_ORTHOMOSAIC_georeferenced_1);
-        map.addLayer(layer_ORTHOMOSAIC_georeferenced_1);
+        map.createPane('pane_Orthomosaic_1');
+        map.getPane('pane_Orthomosaic_1').style.zIndex = 401;
+        var img_Orthomosaic_1 = 'data/Orthomosaic_1.png';
+        var img_bounds_Orthomosaic_1 = [[-7.623917080856694,112.53548343759712],[-7.62290429916348,112.53698034258313]];
+        var layer_Orthomosaic_1 = new L.imageOverlay(img_Orthomosaic_1,
+                                              img_bounds_Orthomosaic_1,
+                                              {pane: 'pane_Orthomosaic_1'});
+        bounds_group.addLayer(layer_Orthomosaic_1);
+        map.addLayer(layer_Orthomosaic_1);
         function pop_IrigasiPacet_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -287,7 +287,7 @@
         var baseMaps = {};
         var overlaysTree = [
             {label: '<img src="legend/IrigasiPacet_2.png" /> Irigasi Pacet', layer: layer_IrigasiPacet_2},
-            {label: "ORTHOMOSAIC_georeferenced", layer: layer_ORTHOMOSAIC_georeferenced_1},
+            {label: "Orthomosaic", layer: layer_Orthomosaic_1},
             {label: "Google Satellite", layer: layer_GoogleSatellite_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
