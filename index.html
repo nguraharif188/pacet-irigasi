@@ -75,7 +75,7 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
 
-    </style>
+        </style>
         <title>TRIPETA AGRICULTURE | Irigasi Pacet</title>
     </head>
     <body>
@@ -136,8 +136,8 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/IrigasiPacet_2.js"></script>
-
+        <script src="data/Irigasi_2.js"></script>
+        
         <!-- Bootstrap JS, Popper.js, and jQuery -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -232,7 +232,7 @@
                                               {pane: 'pane_Orthomosaic_1'});
         bounds_group.addLayer(layer_Orthomosaic_1);
         map.addLayer(layer_Orthomosaic_1);
-        function pop_IrigasiPacet_2(feature, layer) {
+        function pop_Irigasi_2(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">Lokasi</th>\
@@ -254,9 +254,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_IrigasiPacet_2_0() {
+        function style_Irigasi_2_0() {
             return {
-                pane: 'pane_IrigasiPacet_2',
+                pane: 'pane_Irigasi_2',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -269,23 +269,23 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_IrigasiPacet_2');
-        map.getPane('pane_IrigasiPacet_2').style.zIndex = 402;
-        map.getPane('pane_IrigasiPacet_2').style['mix-blend-mode'] = 'normal';
-        var layer_IrigasiPacet_2 = new L.geoJson(json_IrigasiPacet_2, {
+        map.createPane('pane_Irigasi_2');
+        map.getPane('pane_Irigasi_2').style.zIndex = 402;
+        map.getPane('pane_Irigasi_2').style['mix-blend-mode'] = 'normal';
+        var layer_Irigasi_2 = new L.geoJson(json_Irigasi_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_IrigasiPacet_2',
-            layerName: 'layer_IrigasiPacet_2',
-            pane: 'pane_IrigasiPacet_2',
-            onEachFeature: pop_IrigasiPacet_2,
-            style: style_IrigasiPacet_2_0,
+            dataVar: 'json_Irigasi_2',
+            layerName: 'layer_Irigasi_2',
+            pane: 'pane_Irigasi_2',
+            onEachFeature: pop_Irigasi_2,
+            style: style_Irigasi_2_0,
         });
-        bounds_group.addLayer(layer_IrigasiPacet_2);
-        map.addLayer(layer_IrigasiPacet_2);
+        bounds_group.addLayer(layer_Irigasi_2);
+        map.addLayer(layer_Irigasi_2);
         var baseMaps = {};
         var overlaysTree = [
-            {label: '<img src="legend/IrigasiPacet_2.png" /> Irigasi Pacet', layer: layer_IrigasiPacet_2},
+            {label: '<img src="legend/Irigasi_2.png" /> Irigasi', layer: layer_Irigasi_2},
             {label: "Orthomosaic", layer: layer_Orthomosaic_1},
             {label: "Google Satellite", layer: layer_GoogleSatellite_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
